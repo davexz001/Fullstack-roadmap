@@ -48,7 +48,7 @@
 
   .hero-label {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--accent1);
@@ -60,7 +60,7 @@
   }
 
   h1 {
-    font-size: clamp(40px, 8vw, 90px);
+    font-size: clamp(48px, 9.6vw, 108px);
     font-weight: 800;
     line-height: 1;
     margin-bottom: 16px;
@@ -72,7 +72,7 @@
 
   .hero-sub {
     color: var(--muted);
-    font-size: 16px;
+    font-size: 19px;
     max-width: 500px;
     margin: 0 auto;
     line-height: 1.6;
@@ -121,7 +121,7 @@
 
   .progress-label {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
+    font-size: 13px;
     color: var(--muted);
     display: flex;
     justify-content: space-between;
@@ -164,6 +164,7 @@
   .phase:nth-child(4) { animation-delay: 0.4s; }
   .phase:nth-child(5) { animation-delay: 0.5s; }
   .phase:nth-child(6) { animation-delay: 0.6s; }
+  .phase:nth-child(7) { animation-delay: 0.7s; }
 
   @keyframes slideIn {
     to { opacity: 1; transform: translateX(0); }
@@ -186,7 +187,7 @@
     align-items: center;
     justify-content: center;
     font-family: 'Space Mono', monospace;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     flex-shrink: 0;
     position: relative;
@@ -206,7 +207,7 @@
 
   .phase-num {
     font-family: 'Space Mono', monospace;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 3px;
@@ -218,14 +219,14 @@
   .phase-num.blue { color: var(--accent4); }
 
   .phase-name {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 800;
     color: var(--text);
   }
 
   .phase-duration {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
+    font-size: 13px;
     color: var(--muted);
     background: var(--surface);
     border: 1px solid var(--border);
@@ -300,13 +301,13 @@
   }
 
   .topic-name {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 3px;
   }
 
   .topic-desc {
-    font-size: 11px;
+    font-size: 13px;
     color: var(--muted);
     font-family: 'Space Mono', monospace;
     line-height: 1.4;
@@ -319,7 +320,7 @@
     border-left: 3px solid;
     border-radius: 0 4px 4px 0;
     padding: 12px 16px;
-    font-size: 13px;
+    font-size: 16px;
     color: var(--muted);
     line-height: 1.6;
     font-family: 'Space Mono', monospace;
@@ -337,7 +338,7 @@
 
   .project-badge {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
+    font-size: 13px;
     padding: 5px 12px;
     border-radius: 2px;
     border: 1px solid;
@@ -351,7 +352,7 @@
 
   .section-label {
     font-family: 'Space Mono', monospace;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--muted);
@@ -369,7 +370,7 @@
 
   .footer-tip p {
     font-family: 'Space Mono', monospace;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--muted);
     max-width: 500px;
     margin: 0 auto;
@@ -516,12 +517,50 @@
     </div>
   </div>
 
-  <!-- Phase 4 -->
+  <!-- Phase 4 WordPress -->
+  <div class="phase" data-phase="4wp">
+    <div class="phase-header" onclick="togglePhase(this)">
+      <div class="phase-dot orange">04</div>
+      <div class="phase-title-wrap">
+        <div class="phase-num orange">Phase 04 · CMS Development</div>
+        <div class="phase-name">WordPress & GitHub Workflow</div>
+      </div>
+      <div class="phase-duration">1–2 months</div>
+      <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+    <div class="phase-content">
+      <div class="section-label">// core topics</div>
+      <div class="topics">
+        <div class="topic" onclick="toggleTopic(this)"><div class="topic-name">PHP Basics</div><div class="topic-desc">Syntax, functions, arrays, OOP</div></div>
+        <div class="topic" onclick="toggleTopic(this)"><div class="topic-name">LocalWP Setup</div><div class="topic-desc">Run WordPress locally for dev</div></div>
+        <div class="topic" onclick="toggleTopic(this)"><div class="topic-name">WP Template Hierarchy</div><div class="topic-desc">How WP loads page/post templates</div></div>
+        <div class="topic" onclick="toggleTopic(this)"><div class="topic-name">Custom Themes</div><div class="topic-desc">Build themes from scratch with PHP</div></div>
+        <div class="topic" onclick="toggleTopic(this)"><div class="topic-name">Hooks & Filters</div><div class="topic-desc">actions, filters, add_action()</div></div>
+        <div class="topic" onclick="toggleTopic(this)"><div class="topic-name">Custom Plugins</div><div class="topic-desc">Write your own WP plugins</div></div>
+        <div class="topic" onclick="toggleTopic(this)"><div class="topic-name">ACF</div><div class="topic-desc">Advanced Custom Fields for dynamic content</div></div>
+        <div class="topic" onclick="toggleTopic(this)"><div class="topic-name">WooCommerce</div><div class="topic-desc">E-commerce, products, checkout</div></div>
+        <div class="topic" onclick="toggleTopic(this)"><div class="topic-name">Block Themes (FSE)</div><div class="topic-desc">Full Site Editing, theme.json</div></div>
+        <div class="topic" onclick="toggleTopic(this)"><div class="topic-name">WP REST API</div><div class="topic-desc">Headless WP with React frontend</div></div>
+        <div class="topic" onclick="toggleTopic(this)"><div class="topic-name">Git for WP Themes</div><div class="topic-desc">Init repo in theme folder, push to GitHub</div></div>
+        <div class="topic" onclick="toggleTopic(this)"><div class="topic-name">Deploy to cPanel/VPS</div><div class="topic-desc">Upload theme, connect database</div></div>
+      </div>
+      <div class="section-label">// build these projects</div>
+      <div class="projects">
+        <span class="project-badge orange">Custom WP Theme (on GitHub)</span>
+        <span class="project-badge orange">WooCommerce Store</span>
+        <span class="project-badge orange">Headless WP + React</span>
+        <span class="project-badge orange">Client Portfolio Site</span>
+      </div>
+      <div class="phase-note" style="border-left-color: var(--accent2)"><strong>GitHub workflow:</strong> Your theme folder IS your repo. git init inside wp-content/themes/your-theme, commit every change, push to GitHub. Clients and freelance platforms love seeing live WP sites with public repos.</div>
+    </div>
+  </div>
+
+  <!-- Phase 5 -->
   <div class="phase" data-phase="4">
     <div class="phase-header" onclick="togglePhase(this)">
-      <div class="phase-dot blue">04</div>
+      <div class="phase-dot blue">05</div>
       <div class="phase-title-wrap">
-        <div class="phase-num blue">Phase 04 · DevOps & Deployment</div>
+        <div class="phase-num blue">Phase 05 · DevOps & Deployment</div>
         <div class="phase-name">Docker, CI/CD & Cloud</div>
       </div>
       <div class="phase-duration">1–2 months</div>
@@ -551,9 +590,9 @@
   <!-- Phase 5 -->
   <div class="phase" data-phase="5">
     <div class="phase-header" onclick="togglePhase(this)">
-      <div class="phase-dot green">05</div>
+      <div class="phase-dot green">06</div>
       <div class="phase-title-wrap">
-        <div class="phase-num green">Phase 05 · Advanced</div>
+        <div class="phase-num green">Phase 06 · Advanced</div>
         <div class="phase-name">Next.js, System Design & More</div>
       </div>
       <div class="phase-duration">ongoing</div>
